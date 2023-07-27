@@ -1,0 +1,9 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: frontapp
+  labels:
+    homework: frontapp
+spec:
+  replicas: 2
+  

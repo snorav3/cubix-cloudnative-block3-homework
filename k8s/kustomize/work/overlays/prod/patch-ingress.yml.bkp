@@ -1,0 +1,11 @@
+- op: add
+  path: /spec/rules/0/paths/-
+  value: 
+    path: /application.cubix.localhost
+    pathType: Prefix
+    backend:
+      service: 
+        name: apps
+        port:
+          name: web
+

@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontapp
+  labels:
+    homework: frontapp
+  namespace: hw3-prod
+spec:
+  rules:
+  - host: application.cubix.localhost
+  - http: 
+      paths:
+      - path: /frontapp
+        pathType: Prefix
+        backend:
+          service: 
+            name: frontapp
+            port:
+              number: 8080

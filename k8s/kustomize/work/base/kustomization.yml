@@ -1,0 +1,5 @@
+resources:
+- deployment-frontapp.yml
+- deployment-backapp.yml
+- service-frontapp.yml
+- service-backapp.yml
