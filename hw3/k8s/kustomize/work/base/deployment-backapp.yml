@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backapp
+  labels:
+    homework: backapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      homework: backapp
+  template:
+    metadata:
+      labels:
+        homework: backapp
+    spec:
+      containers:
+      - name: backapp
+        env:
+        - name: APP_DEFAULT_MESSAGE
+          value: backapp
+        - name: JAVA_OPTS
+          value: 
+        image: quay.io/drsylent/cubix/block3/homework-backapp:springboot3
+        ports: 
+        - containerPort: 8080
+              

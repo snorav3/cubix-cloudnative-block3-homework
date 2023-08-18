@@ -1,0 +1,20 @@
+frontapp:
+  image:
+    repository: quay.io/drsylent/cubix/block3/homework-frontapp
+    pullPolicy: IfNotPresent
+    tag: "springboot3"
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: false
+backapp:
+  image:
+    repository: quay.io/drsylent/cubix/block3/homework-backapp
+    pullPolicy: IfNotPresent
+    tag: "springboot3"
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: false

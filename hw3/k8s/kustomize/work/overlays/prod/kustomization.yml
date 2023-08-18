@@ -1,0 +1,8 @@
+bases:
+- ../../base
+namespace: hw3-prod
+resources:
+- ingress.yml
+patches:
+- patch-scaling-frontapp.yml
+- patch-scaling-backapp.yml

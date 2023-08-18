@@ -1,0 +1,26 @@
+frontapp:
+  image:
+    repository: quay.io/drsylent/cubix/block3/homework-frontapp
+    pullPolicy: IfNotPresent
+    tag: "springboot3"
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: true
+    className: ""
+    hosts:
+      - host: grafana.cubix.localhost
+        paths:
+          - path: /frontapp
+            pathType: Prefix
+backapp:
+  image:
+    repository: quay.io/drsylent/cubix/block3/homework-backapp
+    pullPolicy: IfNotPresent
+    tag: "springboot3"
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: false

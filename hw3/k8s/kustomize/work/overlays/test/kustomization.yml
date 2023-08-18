@@ -1,0 +1,5 @@
+bases:
+- ../../base
+namespace: hw3-test
+resources:
+- ingress.yml
